@@ -1,4 +1,4 @@
-# Radiology-ir
+# Radiology-IR
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
@@ -51,3 +51,7 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## License
+
+For code written by [magic-lantern](https://github.com/magic-lantern), see the [LICENSE](LICENSE.md) file for license rights and limitations (Apache License, Version 2.0).
+Code from other parties may have different licensing terms.
