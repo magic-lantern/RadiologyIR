@@ -1,0 +1,65 @@
+.page-header {
+  background-color: #151515;
+  margin: 0;
+  padding-top: 1px;
+  padding-left: 1.5rem;
+}
+.dashboard {
+  background: linear-gradient(#151515, #114056);
+  padding-left: 1.5rem;
+}
+.text-white {
+  color: #DDD;
+}
+.dl-horizontal dt {
+  width: 6vw;
+}
+.dl-horizontal dd {
+  margin-left: 8vw;
+}
+dl {
+  margin-bottom: 1rem;
+}
+.name {
+  position: relative;
+  bottom: 7.8rem;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.lead {
+  margin-bottom: 1rem;
+}
+.report-header {
+  border-bottom: 1px solid #282828;
+}
+.main-content {
+  padding-left: 1rem;
+}
+.form-control {
+  background: black;
+  margin-left: 2rem;
+  width: 55vw;
+}
+#modality {
+  width: 100%;
+}
+#areaimaged {
+  margin-left: 0;
+  width: 28vw;
+}
+#technique {
+  margin-top: 1rem;
+}
+.form-control::input-placeholder {
+  color: #444444;
+}
+.form-control::-moz-placeholder {
+  color: #444444;
+}
+.form-control:-ms-input-placeholder {
+  color: #444444;
+}
+.form-control::-webkit-input-placeholder {
+  color: #444444;
+}

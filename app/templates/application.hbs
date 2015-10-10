@@ -1,3 +1,89 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="page-header">
+  <h3>Radiology Reporting Tool + Information Retrieval <small>A University of Utah BMI 6470 Project</small></h3>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 dashboard">
+      <p class="lead">14:31</p>
+      <p class="lead">Monday, Oct 7, 2105</p>
+      <p class="lead text-right name">User: <span class="text-warning"> Sam Jorgensen</span></p>
+      <div class="well well-sm">
+        <h5 class="text-warning">Reports with Issues</h5>
+        <p><span class="text-warning">2</span> Reports sent back with questions or issues</p>
+      </div>
+      <div class="well well-sm">
+        <h5 class="text-white">Paused Reports</h5>
+        <p><span class="text-white">2</span> Reports started but not completed</p>
+      </div>
+      <div class="well well-sm">
+        <h5 class="text-primary">Pending Reports</h5>
+        <p><span class="text-primary">15</span> Reports to work on</p>
+      </div>
+      <div class="well well-sm">
+        <h5 class="text-success">Recently Completed Reports</h5>
+        <p><span class="text-success">70</span> Completed reports in the last week</p>
+      </div>
+      <div class="well well-sm">
+        <h4 class="text-white">Messages</h4>
+        <dl class="dl-horizontal">
+          <dt class="text-white">John</dt>
+          <dd>Can you call me about the MRI...</dd>
+          <dt class="text-white">Amber</dt>
+          <dd>RE: Contextual Inquiry study...</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="row report-header">
+        <div class="col-sm-4">
+          <p class="lead">Patient: <span class="text-white">Pat Williams</span></p>
+          <p>MRN: 1025582</p>
+        </div>
+        <div class="col-sm-4">
+          <p>Age: 48y</p>
+          <p>Sex: Femle</p>
+        </div>
+        <div class="col-sm-4">
+          <p>Report: 2015.10.345AC</p>
+          <p class="lead">Urgency: <span class="text-success">Normal</span></p>
+        </div>
+      </div>
+      <div class="row main-content">
+        <form class="form-horizontal">
+          <h5 class="text-white">Indication</h5>
+          <textarea class="form-control" rows="3" placeholder="Clinical Indication (if applicable)"></textarea>
+          <div class="row">
+            <div class="col-sm-5">
+              <h5 class="text-white">Procedure</h5>
+              <select class="form-control" id="modality">
+                <option> - Select Modality - </option>
+                <option>Computed Tomography</option>
+                <option>Magnetic Resonance</option>
+                <option>Nuclear Medicine</option>
+                <option>Radiograph/Angiograph</option>
+                <option>Ultrasound</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <h5 class="text-white">&nbsp;</h5>
+              <input type="text" class="form-control" id="areaimaged" placeholder="Area Imaged">
+            </div>
+          </div>
+          <input type="text" class="form-control" id="technique" placeholder="Additional Technique information">
+          <h5 class="text-white">Comparison</h5>
+          <textarea class="form-control" rows="3" placeholder="Comparison exams with dates (if applicable)"></textarea>
+          <h5 class="text-white">Findings</h5>
+          <textarea class="form-control" rows="3" placeholder="Detailed explaination"></textarea>
+          <h5 class="text-white">Conclusion</h5>
+          <textarea class="form-control" rows="3" placeholder="Summary"></textarea>
+        </form>
+      </div>
+      <div class="row main-content">
+        <h4 class="text-white">Radiologic Assistant Results</h4>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{outlet}}
