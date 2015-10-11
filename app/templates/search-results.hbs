@@ -1,0 +1,7 @@
+{{#each-in model as |arritm searchresult|}}
+  {{result-item result=searchresult}}
+{{else}}
+    <p>No results found - try to enter more information</p>
+{{/each-in}}
+
+{{outlet}}
