@@ -19,11 +19,42 @@ export default Ember.Route.extend({
 </Figure>
 
 */
-
-//  model() {
-//    return this.store.findAll('todo');
-//  }
   model() {
+    this.store.createRecord('search-results', {
+      resultID : 1,
+      thumbLocalLink : "http://www.yottalook.com/images/thumbnails/small/cf6539a170fe8de1b15f581563580182540bdbf2.jpg",
+      source : "AJR",
+      fullFigureLink : "http://www.ajronline.org/content/198/3/W217/F5.expansion.html",
+      articleTitle : "Review: Inflammatory Pseudotumor: The Great Mimicker",
+      articleLink : "http://www.ajronline.org/content/198/3/W217.full",
+      articleLinkPDF : "http://www.ajronline.org/content/198/3/W217.reprint",
+      figsonlyLink : "http://www.ajronline.org/content/198/3/W217.figsonly",
+      caption : "Fig. 4A —14-year-old girl with history of asthma. A,Axial (A)...",
+      imageType : "CT",
+      date : "2012-03-01",
+      subscriptionStatus : "n"
+    });
+    //this.store.push('search-results', JSON.parse({
+    this.store.createRecord('search-results', {
+      resultID : 2,
+      thumbLocalLink : "http://www.yottalook.com/images/thumbnails/small/cf6539a170fe8de1b15f581563580182540bdbf2.jpg",
+      source : "AJR",
+      fullFigureLink : "http://www.ajronline.org/content/198/3/W217/F5.expansion.html",
+      articleTitle : "Review: Inflammatory Pseudotumor: The Great Mimicker",
+      articleLink : "http://www.ajronline.org/content/198/3/W217.full",
+      articleLinkPDF : "http://www.ajronline.org/content/198/3/W217.reprint",
+      figsonlyLink : "http://www.ajronline.org/content/198/3/W217.figsonly",
+      caption : "Fig. 4A —14-year-old girl with history of asthma. A,Axial (A)...",
+      imageType : "CT",
+      date : "2012-03-01",
+      subscriptionStatus : "n"
+    });
+    console.log("this.store.all : ", typeof this.store.peekAll('search-results'));
+    return this.store.peekAll('search-results');
+  }
+});
+
+/*    
   let searchresults = [
     {
       ResultID : 1,
@@ -56,3 +87,4 @@ export default Ember.Route.extend({
     return searchresults;
   }
 });
+*/

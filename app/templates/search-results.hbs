@@ -1,7 +1,7 @@
-{{#each-in model as |arritm searchresult|}}
+{{#each model as |searchresult|}}
   {{result-item result=searchresult}}
 {{else}}
     <p>No results found - try to enter more information</p>
-{{/each-in}}
+{{/each}}
 
 {{outlet}}
