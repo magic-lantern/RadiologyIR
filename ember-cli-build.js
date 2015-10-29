@@ -24,6 +24,6 @@ module.exports = function(defaults) {
 
   // import custom themed bootstrap CSS instead of default from bower_components
   app.import('vendor/cyborg_bootstrap_theme/bootstrap.css');
-
+  
   return app.toTree();
 };

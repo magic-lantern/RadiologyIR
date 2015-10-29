@@ -50,6 +50,7 @@ export default Ember.Route.extend({
       subscriptionStatus : "n"
     });
     console.log("this.store.all : ", typeof this.store.peekAll('search-results'));
+    console.log("this.store.findAll : ", this.store.findAll('search-results'));
     return this.store.peekAll('search-results');
   }
 });
