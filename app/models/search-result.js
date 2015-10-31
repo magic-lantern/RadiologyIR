@@ -3,7 +3,7 @@ import Ember from 'ember';
 
 // stupid 'intelligent' pluralization - disable
 var inflector = Ember.Inflector.inflector;
-inflector.uncountable('search-results');
+//inflector.uncountable('search-results');
 
 export default DS.Model.extend({
   resultID: DS.attr('string'),
