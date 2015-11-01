@@ -52,32 +52,35 @@
       <div class="row main-content">
         <form class="form-horizontal">
           <h5 class="text-white">Indication</h5>
-          <textarea class="form-control" rows="3" placeholder="Clinical Indication (if applicable)"></textarea>
+          <textarea id="indication" class="form-control" rows="3" placeholder="Clinical Indication (if applicable)" {{action "search" on="change"}}></textarea>
           <div class="row">
             <div class="col-sm-5">
               <h5 class="text-white">Procedure</h5>
-              <select class="form-control" id="modality">
-                <option> - Select Modality - </option>
-                <option>Computed Tomography</option>
-                <option>Magnetic Resonance</option>
-                <option>Nuclear Medicine</option>
-                <option>Radiograph/Angiograph</option>
-                <option>Ultrasound</option>
+              <select id="modality" class="form-control" {{action "search" on="change"}}>
+                <option value=""> - Select Modality - </option>
+                <option value="CT">Computed Tomography</option>
+                <option value="MR">Magnetic Resonance</option>
+                <option value="NM">Nuclear Medicine</option>
+                <option value="XR">Radiograph/Angiograph</option>
+                <option value="US">Ultrasound</option>
               </select>
             </div>
             <div class="col-sm-6">
               <h5 class="text-white">&nbsp;</h5>
-              <input type="text" class="form-control" id="areaimaged" placeholder="Area Imaged">
+              <input id="areaimaged" type="text" class="form-control" placeholder="Area Imaged" {{action "search" on="change"}}>
             </div>
           </div>
-          <input type="text" class="form-control" id="technique" placeholder="Additional Technique information">
+          <input id="technique" type="text" class="form-control" placeholder="Additional Technique information" {{action "search" on="change"}}>
           <h5 class="text-white">Comparison</h5>
-          <textarea class="form-control" rows="3" placeholder="Comparison exams with dates (if applicable)"></textarea>
+          <textarea id="comparison" class="form-control" rows="3" placeholder="Comparison exams with dates (if applicable)" {{action "search" on="change"}}></textarea>
           <h5 class="text-white">Findings</h5>
-          <textarea class="form-control" rows="3" placeholder="Detailed explaination"></textarea>
+          <textarea id="findings" class="form-control" rows="3" placeholder="Detailed explaination" {{action "search" on="change"}}></textarea>
           <h5 class="text-white">Conclusion</h5>
-          <textarea class="form-control" rows="3" placeholder="Summary"></textarea>
+          <textarea id="conclusions" class="form-control" rows="3" placeholder="Summary" {{action "search" on="change"}}></textarea>
         </form>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary" {{action "search"}}>Search</button>
       </div>
       <div class="row main-content">
         <h4 class="text-white">Radiologic Assistant Results</h4>

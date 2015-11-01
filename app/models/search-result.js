@@ -2,7 +2,7 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 // stupid 'intelligent' pluralization - disable
-var inflector = Ember.Inflector.inflector;
+//var inflector = Ember.Inflector.inflector;
 //inflector.uncountable('search-results');
 
 export default DS.Model.extend({
@@ -17,5 +17,5 @@ export default DS.Model.extend({
   caption : DS.attr('string'),
   imageType : DS.attr('string'),
   date : DS.attr('string'),
-  subscriptionStatus : DS.attr('string')
+  subscriptionStatus : DS.attr('string'),
 });
