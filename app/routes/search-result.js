@@ -7,22 +7,36 @@ export default Ember.Route.extend({
     }
   },
   model(params) {
-    return this.store.query('search-result', params);
+    // this is required - even though it returns nothing - if this line missing,
+    // cannot add to model and have template automatically update later
+    return this.store.peekAll('search-result');
+    //return this.modelFor('search-result');
+    //return this.store.query('search-result', params);
     //return this.store.findAll('search-result');
   },
   actions: {
     search: function(input) {
-      console.log(Ember.$("#indication").val());
-      console.log(Ember.$("#modality").val());
-      console.log(Ember.$("#areaimaged").val());
-      console.log(Ember.$("#technique").val());
-      console.log(Ember.$("#comparison").val());
-      console.log(Ember.$("#findings").val());
-      console.log(Ember.$("#conclusion").val());
-      
-      // TODO: need to make sure at least some of the above have values
-      // then pass off to the IRServer for retrieval
-      //return this.store.query('search-result', params);
+      var self = this;
+      // need to make sure at least two of the fields values then pass
+      // off to the IRServer for retrieval. May tweak threshold later.
+      // only pass those items that have values
+      var counter = 0;
+      var filter = {};
+      var values = ['indication', 'modality', 'areaimaged', 'technique', 'comparison', 'findings', 'conclusions'];
+      values.forEach(function(v) {
+        if (!Ember.isEmpty(Ember.$('#' + v).val())) {
+          counter++;
+          filter[v] = Ember.$('#' + v).val();
+        }
+      });
+
+      if (counter >= 2)
+        self.store.query('search-result', filter);
+    },
+    error(error, transition) {
+      if (error && error.status === 400) {
+        return this.transitionTo('error');
+      }
     }
-  }
+  },
 });

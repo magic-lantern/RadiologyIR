@@ -1,7 +1,6 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 
-// stupid 'intelligent' pluralization - disable
+// how to disable stupid 'intelligent' pluralization
 //var inflector = Ember.Inflector.inflector;
 //inflector.uncountable('search-results');
 

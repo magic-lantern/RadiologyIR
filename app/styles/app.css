@@ -63,3 +63,8 @@ dl {
 .form-control::-webkit-input-placeholder {
   color: #444444;
 }
+.search {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 6rem;
+}

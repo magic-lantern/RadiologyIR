@@ -7,7 +7,7 @@ export default DS.RESTAdapter.extend({
     // no status likely means IRServer not running
     // TODO: figure out how to get Ember to not crash if this is the case
     if (status === 0) {
-      console.log(`ERROR : no value returned from ENV.apiHost - check to see if service running.`);
+      console.log('ERROR : no value returned from ENV.apiHost(' + ENV.apiHost + ') - check to see if service running.');
     }
     return this._super(...arguments);
   }

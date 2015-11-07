@@ -9,6 +9,9 @@ Router.map(function() {
   this.route('search-result', {
     path : "/"
   });
+  this.route('error', {
+    path : "/error"
+  });
 });
 
 export default Router;
