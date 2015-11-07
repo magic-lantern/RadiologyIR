@@ -6,16 +6,13 @@ export default Ember.Route.extend({
       refreshModel: true
     }
   },
-  model(params) {
+  model() {
     // this is required - even though it returns nothing - if this line missing,
     // cannot add to model and have template automatically update later
     return this.store.peekAll('search-result');
-    //return this.modelFor('search-result');
-    //return this.store.query('search-result', params);
-    //return this.store.findAll('search-result');
   },
   actions: {
-    search: function(input) {
+    search: function() {
       var self = this;
       // need to make sure at least two of the fields values then pass
       // off to the IRServer for retrieval. May tweak threshold later.
@@ -30,10 +27,19 @@ export default Ember.Route.extend({
         }
       });
 
-      if (counter >= 2)
-        self.store.query('search-result', filter);
+      if (counter >= 2) {
+        this.store.unloadAll();
+        this.store.query('search-result', filter).then(function(value) {
+            return;
+          }, function(reason) {
+            console.log("error reason: ", reason);
+            self.transitionTo('error');
+        });
+      }
     },
     error(error, transition) {
+      console.log("error : ", error);
+      console.log("transition: ", transition);
       if (error && error.status === 400) {
         return this.transitionTo('error');
       }

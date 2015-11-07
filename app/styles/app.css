@@ -35,18 +35,11 @@ dl {
 }
 .main-content {
   padding-left: 1rem;
+  padding-right: 10rem;
 }
 .form-control {
   background: black;
   margin-left: 2rem;
-  width: 55vw;
-}
-#modality {
-  width: 100%;
-}
-#areaimaged {
-  margin-left: 0;
-  width: 28vw;
 }
 #technique {
   margin-top: 1rem;

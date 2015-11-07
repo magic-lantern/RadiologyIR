@@ -57,7 +57,7 @@
             <div class="col-sm-5">
               <h5 class="text-white">Procedure</h5>
               <select id="modality" class="form-control" {{action "search" on="change"}}>
-                <option value=""> - Select Modality - </option>
+                <option value="all"> - Select Modality - </option>
                 <option value="CT">Computed Tomography</option>
                 <option value="MR">Magnetic Resonance</option>
                 <option value="NM">Nuclear Medicine</option>
@@ -65,7 +65,7 @@
                 <option value="US">Ultrasound</option>
               </select>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-7">
               <h5 class="text-white">&nbsp;</h5>
               <input id="areaimaged" type="text" class="form-control" placeholder="Area Imaged" {{action "search" on="change"}}>
             </div>
