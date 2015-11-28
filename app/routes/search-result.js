@@ -19,7 +19,7 @@ export default Ember.Route.extend({
       // only pass those items that have values
       var counter = 0;
       var filter = {};
-      var values = ['indication', 'modality', 'areaimaged', 'technique', 'comparison', 'findings', 'conclusions'];
+      var values = ['indication', 'modality', 'areaimaged', 'technique', 'comparison', 'findings', 'conclusions', 'gender'];
       values.forEach(function(v) {
         if (!Ember.isEmpty(Ember.$('#' + v).val())) {
           counter++;
