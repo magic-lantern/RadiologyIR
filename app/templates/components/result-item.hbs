@@ -1,16 +1,18 @@
-{{#if result.caption}}
-<h5>{{truncateHelper result.caption 75}} <small>Modality :{{result.imageType}}, Date: {{result.date}}</small></h5>
+{{#if result.content}}
+<h5>{{truncateHelper result.resultTitle 75}} <small>Modality :{{result.modality}}, Date: {{result.date}}</small></h5>
 <dl class="dl-horizontal">
-  <dt>Caption</dt>
-  <dd>{{result.caption}}</dd>
+  <dt>Content</dt>
+  <dd>{{truncateHelper result.content 400}}</dd>
   <dt>Article</dt>
-  <dd><a href="{{result.ArticleLink}}">{{result.articleTitle}}</a></dd>
-  <dt>Images</dt>
-  <dd><a href="{{result.FigsonlyLink}}">{{result.figsonlyLink}}</a></dd>
+  <dd><a href="{{result.ArticleLink}}">{{result.linkTitle}}</a></dd>
+  {{#if result.figsonlyLink}}
+    <dt>Images</dt>
+    <dd><a href="{{result.FigsonlyLink}}">{{result.figsonlyLink}}</a></dd>
+  {{/if}}
   <dt>Source</dt>
   <dd>{{result.source}}</dd>
 </dl>
 {{else}}
-<p>Empty record found</p>
+<p>ERROR - Content missing from result</p>
 {{/if}}
 {{yield}}
