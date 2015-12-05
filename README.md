@@ -8,13 +8,14 @@ A short introduction of this app could easily go here.
 You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
+* [Node.js](http://nodejs.org/) (with NPM) - Used Node v0.12.7 and NPM 2.11.3 for this project.
+* [Bower](http://bower.io/) - Used 1.6.5 for this project
+* [Ember CLI](http://www.ember-cli.com/) - Used 1.13.8 for this project.
 * [PhantomJS](http://phantomjs.org/)
 
 ## Installation
 
+* Verify you have all prerequisites already installed
 * `git clone <repository-url>` this repository
 * change into the new directory
 * `npm install`
@@ -22,6 +23,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
+* Install and run [RadiologyIRServer](https://github.com/magic-lantern/RadiologyIRServer) as per project instructions.
+* Change apiHost variable in ./config/environment.js to point to correct host and port of RadiologyIRServer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
@@ -34,14 +37,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember test`
 * `ember test --server`
 
-### Building
+### Building for deployment
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
