@@ -15,4 +15,5 @@ export default DS.Model.extend({
   content : DS.attr('string'),
   modality : DS.attr('string'),
   date : DS.attr('string'),
+  ObjectId : DS.attr('string'),
 });

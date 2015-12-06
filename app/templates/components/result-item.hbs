@@ -6,10 +6,10 @@
   <dt>Modality</dt>
   <dd>{{result.modality}}</dd>
   <dt>Article</dt>
-  <dd><a href="{{result.articleLink}}">{{result.linkTitle}}</a></dd>
+  <dd><a href="{{result.articleLink}}" {{action "logclick" preventDefault=false}}>{{result.linkTitle}}</a></dd>
   {{#if result.figsonlyLink}}
     <dt>Images</dt>
-    <dd><a href="{{result.figsonlyLink}}">{{result.figsonlyLink}}</a></dd>
+    <dd><a href="{{result.figsonlyLink}}" {{action "logclick" preventDefault=false}}>{{result.figsonlyLink}}</a></dd>
   {{/if}}
   <dt>Source</dt>
   <dd>{{result.source}}</dd>
