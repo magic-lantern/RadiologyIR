@@ -1,7 +1,6 @@
 # Radiology-IR
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+ This is a prototype application that applies Information Retrieval principles and techniques to support radiologic findings. This tool will allow radiologists to find documents, journal articles, and sample cases similar cases to a case they are currently reviewing. By providing patient context aware and case specific information to radiologists at the point of case review, this system will aid their decision making process.
 
 ## Prerequisites
 
